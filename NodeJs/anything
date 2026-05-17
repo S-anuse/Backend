@@ -1,0 +1,37 @@
+node js is js runtime environment
+runtime environment ->
+backend can not be done using js
+to make backend done using js so google chrome's v8 engine is used 
+chrome's v8 engine is written in c++
+
+
+
+chrome ch v8 engine ahe 
+tyachvarti kahitr wrapper ahe te js cha ahe 
+tu konta tr js cha code lihshil to jail tya wrapper kade je pan js ahe and te convert karel and send karel v8 engine la and we will get server
+
+we will write js code that will be received by wrapper layer of js and woh code v8 engine ke cpp modules ke sath ek server create krega
+
+jab tak node chal raha hain we can create server from js 
+
+so whenever node js is running it is allowing us to create server from js
+
+people upload their packages on npm and we can download and use it in our codebase
+
+npm init
+node basic usage
+
+
+
+
+Packages ->
+**1**
+http /https
+protocol -> rules
+internet par kuch bhi karne keliye rules banaye gaye hain unke dwara jinhone internet banaaya hai ab un rules ko follow karna jaruri hain , aur ye rules follow ho isliye ye rules aap ke  os ke software mein pre installed hain 
+
+os contains networking realetd everything already installed 
+so jo bhi browser ham use karte hain woh installed laptop ke os ke networking ko use karta hain 
+
+http is also protocol
+yahi protocol hain ya rule hain jisiko follow kare bina aap internet pe naa hi kuch bhej sakate ho , naa hi kuchh manga sakte ho 
