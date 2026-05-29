@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-100 p-8 font-sans">
+    <div class="flex gap-4 flex-wrap w-full h-full flex-col">
+        <a href="/" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors w-fit">← Back To home</a>
+        <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">All Users</h1>
+        <div class="users flex gap-6 flex-wrap w-full h-full justify-start items-stretch">
+            <% if(allusers.length > 0) { %>
+                <% allusers.forEach((user) => { %>
+                    <div class="items-center rounded-2xl p-4 bg-white shadow-xs border border-slate-200/60 hover:shadow-md transition-all duration-300 flex flex-col w-80">
+                        <div class="h-52 w-72 rounded-xl bg-slate-100 overflow-hidden relative">
+                            <img src="<%= user.image %>" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mt-4 tracking-tight w-full text-left px-2 truncate"><%= user.name %></h3>
+                        <h5 class="text-sm text-slate-500 mb-4 w-full text-left px-2 truncate"><%= user.email %></h5>
+                        <div class="flex gap-3 w-full px-2 mt-auto">
+                            <a href="/edit/<%= user._id %>" class="flex-1 text-center py-2 text-sm font-semibold text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-xl transition-colors">Edit User</a>
+                            <a href="/delete/<%= user._id %>" class="flex-1 text-center py-2 text-sm font-semibold text-red-600 bg-red-50 hover:bg-red-100 rounded-xl transition-colors">Delete User</a>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <div class="w-full py-12 text-center bg-white rounded-2xl border border-slate-200/60 shadow-xs">
+                    <p class="text-slate-500 font-medium">No users found in the database.</p>
+                    <a href="/" class="text-sm text-blue-600 font-semibold hover:underline mt-2 inline-block">Create the first user</a>
+                </div>
+            <% } %> </div>
+        </div>
+    </div>
+</body>
+</html>

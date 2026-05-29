@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-4 font-sans">
+    <div class="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/60 w-full max-w-md">
+        <div class="nav text-blue-500 mb-6">
+            <a href="/read" class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                View All Users →
+            </a>
+        </div>
+        <h1 class="text-2xl font-extrabold text-slate-800 tracking-tight mb-6">Create User</h1>
+        <form action="/create" method="POST" class="flex flex-col gap-4">
+            <input type="text" name="name" placeholder="Name" 
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all text-slate-800 placeholder-slate-400">
+            
+            <input type="text" name="email" placeholder="Email" 
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all text-slate-800 placeholder-slate-400">
+            
+            <input type="text" name="image" placeholder="Image URL" 
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all text-slate-800 placeholder-slate-400">
+            
+            <input type="submit" value="Create User" 
+                class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl cursor-pointer shadow-xs shadow-blue-500/10 hover:shadow-md transition-all duration-200">
+        </form>
+    </div>
+</body>
+</html>
