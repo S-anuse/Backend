@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 min-h-screen antialiased font-sans text-gray-900">
+
+    <main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+        <h3 class="text-xs font-medium tracking-wide uppercase text-gray-400">Edit your post</h3>
+        <section class="bg-white p-5 rounded-2xl border border-gray-200/70 shadow-xs">
+            <form class="space-y-3" action="/update/<%= post._id %>" method="POST">
+                <textarea name="postData" placeholder="What's on your mind?" class="w-full h-24 p-3.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm transition-all resize-none placeholder-gray-400 bg-gray-50/30 focus:bg-white"><%= post.postData %></textarea>
+                <div class="flex justify-end">
+                    <input type="submit" value="Update Post" class="px-6 bg-blue-600 text-white text-sm font-semibold py-2 rounded-xl hover:bg-blue-700 active:scale-[0.98] transition duration-200 cursor-pointer shadow-xs shadow-blue-500/10">
+                </div>
+            </form>
+        </section>
+        
+    </main>
+
+</body>
+</html>
